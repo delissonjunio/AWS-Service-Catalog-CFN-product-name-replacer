@@ -1,6 +1,6 @@
 {
   "name": "AWS Service Catalog CFN product name replacer",
-  "version": "1.0",
+  "version": "1.0.1",
   "author": "Délisson Silva",
   "description": "Replaces AWS Service Catalog-generated stack names with the product's name",
   "manifest_version": 2,
