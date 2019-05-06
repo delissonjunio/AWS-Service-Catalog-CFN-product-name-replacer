@@ -1,0 +1,28 @@
+{
+  "name": "AWS Service Catalog CFN product name replacer",
+  "version": "1.0",
+  "author": "Délisson Silva",
+  "description": "Replaces AWS Service Catalog-generated stack names with the product's name",
+  "manifest_version": 2,
+  "permissions": ["https://console.aws.amazon.com/.*","tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "250": "tab-icon.png"
+  },
+  "browser_action": {
+    "default_icon": "tab-icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://console.aws.amazon.com/cloudformation/home*"],
+      "js": ["main.js"]
+    },
+    {
+      "matches": ["https://console.aws.amazon.com/servicecatalog/home*"],
+      "js": ["store.js"]
+    }
+  ]
+}
